@@ -17,6 +17,7 @@
     </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -37,7 +38,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Karma</a>
+          <a class="brand" >Karma</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="<%= 'active' if params[:controller] == 'yourdefaultcontroller' %>"><a href="#">Home</a></li>
@@ -456,119 +457,1038 @@ new TWTR.Widget({
 	  <div class="span12">
 	  <h2>Publications</h2> 
 
-<SCRIPT charset="utf-8" type="text/javascript" src="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&amp;MarketPlace=US&amp;ID=V20070822/US/bib0d-20/8005/988928d1-4ba9-465b-91e6-b5496ef7f913"> </SCRIPT> <NOSCRIPT><A HREF="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&amp;MarketPlace=US&amp;ID=V20070822%2FUS%2Fbib0d-20%2F8005%2F988928d1-4ba9-465b-91e6-b5496ef7f913&amp;Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT>
-<table class="publish_table"><tr>
-<td><a href="http://www.bibbase.org/show?simplegroups=yes&amp;bib=www.isi.edu/integration/karma/karma-bib.bib&amp;proxy=1&amp;css=1&amp;noauthorlinks=1&amp;rss=True"><img src="http://www.bibbase.org/resources/16px-Feed-icon.svg.png" width="16" height="16" title="subscribe to this list of publications" alt="rss" /></a></td>
-<td class='bibbase_grouping'>group by: 
-<select name='group0' id='group0' onchange="update('www.isi.edu/integration/karma/karma-bib.bib')">
-<option value="">none</option>
-<option value='authors'>authors</option>
-<option value='keywords'>keywords</option>
-<option value='type'>type</option>
-<option value='year' selected="selected">year</option>
-</select>
-<select name='group1' id='group1' onchange="update('www.isi.edu/integration/karma/karma-bib.bib')">
-<option value="" selected="selected">none</option>
-<option value='authors'>authors</option>
-<option value='keywords'>keywords</option>
-<option value='type'>type</option>
-<option value='year'>year</option>
-</select>
-</td>
-<td class='bibbase_grouping'><input type="button" onclick="foldall()" value="collapse/expand" /></td>
-<td id="bibbase_table">
-</td>
-</tr></table>
-<div id="controller">
-</div>
-<div id="bibarea">
 
-<div class='bibbase_group'><div class='bibbase_group' onclick='toggleFold("id_2013")' title='fold/unfold' >&nbsp;<img id="icon_id_2013" src="http://www.bibbase.org/resources/unfolded.gif"  alt="id_2013unfolded.gif" />&nbsp;2013 <span class='bibbase_group_count'>(1)</span></div></div><div id="id_2013" class="bibbase_group_body">
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/Szekely:2013vq.html'" style="cursor: pointer; cursor: hand;">Connecting the Smithsonian American Art Museum to the Linked Data Cloud.</span> <span class='bibbase_paper_author'>Szekely, P.; Knoblock; A, C.; Fengyu, Y.; Zhu, X.; Fink, E.; Allen, R.; and Goodlander, G.</span> <span class='bibbase_paper_year'>2013.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Proceedings of the 10th Extended Semantic Web Conference</span>, Montpellier, May.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://slidesha.re/18vxMnn" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=slidesha.re/18vxMnn';"><img src="http://www.bibbase.org/resources/filetypes/html.png" alt="Slides [http://slidesha.re/18vxMnn]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Slides</span></a> <a href="http://www.isi.edu/~szekely/contents/papers/2013/eswc-2013-saam.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/~szekely/contents/papers/2013/eswc-2013-saam.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Paper [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Paper</span></a> <a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/Szekely:2013vq.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Paper [bib]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> &nbsp; <span class='bibbase_stats_paper' style='color: #777;'><span id='span_stats_paper_http___www_isi_edu__szekely_contents_papers_2013_eswc_2013_saam_pdf'></span></span> &nbsp;</span> <br/>
+<div id="bibbase">
+  <script type="text/javascript">
+    var bibbase = {
+      params: {"bib":"isi.edu/integration/karma/karma-bib.bib","groupby":"year"},
+      data: [{"address":"Montpellier","author":["Szekely, Pedro","Knoblock","A, Craig","Fengyu, Yang","Zhu, Xuming","Fink, Eleanor","Allen, Rachel","Goodlander, Georgina"],"author_short":["Szekely, P.","Knoblock","A, C.","Fengyu, Y.","Zhu, X.","Fink, E.","Allen, R.","Goodlander, G."],"bibtex":"@inproceedings{ Szekely:2013vq,\n  author = {Szekely, Pedro and Knoblock, Craig A and Fengyu, Yang and Zhu, Xuming and Fink, Eleanor and Allen, Rachel and Goodlander, Georgina},\n  title = {{Connecting the Smithsonian American Art Museum to the Linked Data Cloud}},\n  booktitle = {Proceedings of the 10th Extended Semantic Web Conference},\n  year = {2013},\n  address = {Montpellier},\n  month = {May},\n  rating = {0},\n  date-added = {2013-03-17T04:37:12GMT},\n  date-modified = {2013-05-04T01:24:47GMT},\n  uri = {̆rl{papers2://publication/uuid/B9751C9E-0A53-4B2E-93C4-7524C7351942}},\n  urlpaper = {http://www.isi.edu/~szekely/contents/papers/2013/eswc-2013-saam.pdf},\n  urlslides = {http://slidesha.re/18vxMnn}\n}","bibtype":"inproceedings","booktitle":"Proceedings of the 10th Extended Semantic Web Conference","date-added":"2013-03-17T04:37:12GMT","date-modified":"2013-05-04T01:24:47GMT","id":"Szekely:2013vq","key":"Szekely:2013vq","month":"May","rating":"0","title":"Connecting the Smithsonian American Art Museum to the Linked Data Cloud","type":"inproceedings","uri":"̆rlpapers2://publication/uuid/B9751C9E-0A53-4B2E-93C4-7524C7351942","urlpaper":"http://www.isi.edu/~szekely/contents/papers/2013/eswc-2013-saam.pdf","urlslides":"http://slidesha.re/18vxMnn","year":"2013","role":"author","urls":{"paper":"http://www.isi.edu/~szekely/contents/papers/2013/eswc-2013-saam.pdf","slides":"http://slidesha.re/18vxMnn"},"bibbaseid":"szekely--a-fengyu-zhu-fink-allen-goodlander-connectingthesmithsonianamericanartmuseumtothelinkeddatacloud-2013","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"Szekely:2013vq\"> </a>Connecting the Smithsonian American Art Museum to the Linked Data Cloud.</span>\n\t<span class=\"bibbase_paper_author\">\nSzekely, P.; Knoblock; A, C.; Fengyu, Y.; Zhu, X.; Fink, E.; Allen, R.;  and Goodlander, G.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2013</span>. -->\n</span>\n\n\n\nIn\n<i>Proceedings of the 10th Extended Semantic Web Conference</i>, Montpellier, May 2013.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('szekely--a-fengyu-zhu-fink-allen-goodlander-connectingthesmithsonianamericanartmuseumtothelinkeddatacloud-2013', 'http://www.isi.edu/~szekely/contents/papers/2013/eswc-2013-saam.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/~szekely/contents/papers/2013/eswc-2013-saam.pdf\"\n     onclick=\"javascript:log_download('szekely--a-fengyu-zhu-fink-allen-goodlander-connectingthesmithsonianamericanartmuseumtothelinkeddatacloud-2013', 'http://www.isi.edu/~szekely/contents/papers/2013/eswc-2013-saam.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Connecting the Smithsonian American Art Museum to the Linked Data Cloud [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">paper</span></a> \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('szekely--a-fengyu-zhu-fink-allen-goodlander-connectingthesmithsonianamericanartmuseumtothelinkeddatacloud-2013', 'http://slidesha.re/18vxMnn')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://slidesha.re/18vxMnn\"\n     onclick=\"javascript:log_download('szekely--a-fengyu-zhu-fink-allen-goodlander-connectingthesmithsonianamericanartmuseumtothelinkeddatacloud-2013', 'http://slidesha.re/18vxMnn')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/blank.png\"\n\t alt=\"Connecting the Smithsonian American Art Museum to the Linked Data Cloud [.re/18vxMnn]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">slides</span></a> \n  \n  \n  <a href=\"javascript:showBib('Szekely:2013vq')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Connecting the Smithsonian American Art Museum to the Linked Data Cloud [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"author":["Taheriyan, Mohsen","Knoblock, Craig A.","Szekely, Pedro","Ambite, Jose Luis"],"author_short":["Taheriyan, M.","Knoblock, C.<nbsp>A.","Szekely, P.","Ambite, J.<nbsp>L."],"bibtex":"@inproceedings{ taheriyan12:iswc,\n  author = {Mohsen Taheriyan and Craig A. Knoblock and Pedro Szekely and Jose Luis Ambite},\n  title = {Rapidly Integrating Services into the Linked Data Cloud},\n  booktitle = {Proceedings of the 11th International Semantic Web Conference (ISWC 2012)},\n  year = {2012},\n  keywords = {\"Source modeling\"},\n  urlpaper = {http://www.isi.edu/~szekely/contents/papers/2012/iswc2012_cameraready_34.pdf},\n  urlposter = {http://www.isi.edu/integration/karma/other-materials/taheriyan/gss2012-poster.pdf}\n}","bibtype":"inproceedings","booktitle":"Proceedings of the 11th International Semantic Web Conference (ISWC 2012)","id":"taheriyan12:iswc","key":"taheriyan12:iswc","keywords":"\"Source modeling\"","title":"Rapidly Integrating Services into the Linked Data Cloud","type":"inproceedings","urlpaper":"http://www.isi.edu/~szekely/contents/papers/2012/iswc2012_cameraready_34.pdf","urlposter":"http://www.isi.edu/integration/karma/other-materials/taheriyan/gss2012-poster.pdf","year":"2012","role":"author","urls":{"paper":"http://www.isi.edu/~szekely/contents/papers/2012/iswc2012_cameraready_34.pdf","poster":"http://www.isi.edu/integration/karma/other-materials/taheriyan/gss2012-poster.pdf"},"bibbaseid":"taheriyan-knoblock-szekely-ambite-rapidlyintegratingservicesintothelinkeddatacloud-2012","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"taheriyan12:iswc\"> </a>Rapidly Integrating Services into the Linked Data Cloud.</span>\n\t<span class=\"bibbase_paper_author\">\nTaheriyan, M.; Knoblock, C.&nbsp;A.; Szekely, P.;  and Ambite, J.&nbsp;L.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2012</span>. -->\n</span>\n\n\n\nIn\n<i>Proceedings of the 11th International Semantic Web Conference (ISWC 2012)</i>,  2012.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('taheriyan-knoblock-szekely-ambite-rapidlyintegratingservicesintothelinkeddatacloud-2012', 'http://www.isi.edu/~szekely/contents/papers/2012/iswc2012_cameraready_34.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/~szekely/contents/papers/2012/iswc2012_cameraready_34.pdf\"\n     onclick=\"javascript:log_download('taheriyan-knoblock-szekely-ambite-rapidlyintegratingservicesintothelinkeddatacloud-2012', 'http://www.isi.edu/~szekely/contents/papers/2012/iswc2012_cameraready_34.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Rapidly Integrating Services into the Linked Data Cloud [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">paper</span></a> \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('taheriyan-knoblock-szekely-ambite-rapidlyintegratingservicesintothelinkeddatacloud-2012', 'http://www.isi.edu/integration/karma/other-materials/taheriyan/gss2012-poster.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/karma/other-materials/taheriyan/gss2012-poster.pdf\"\n     onclick=\"javascript:log_download('taheriyan-knoblock-szekely-ambite-rapidlyintegratingservicesintothelinkeddatacloud-2012', 'http://www.isi.edu/integration/karma/other-materials/taheriyan/gss2012-poster.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Rapidly Integrating Services into the Linked Data Cloud [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">poster</span></a> \n  \n  \n  <a href=\"javascript:showBib('taheriyan12:iswc')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Rapidly Integrating Services into the Linked Data Cloud [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"address":"Crete, Greece","author":["Knoblock, Craig A.","Szekely, Pedro","Ambite, Jose Luis","Gupta, Shubham","Goel, Aman","Muslea, Maria","Lerman, Kristina","Mallick, Parag"],"author_short":["Knoblock, C.<nbsp>A.","Szekely, P.","Ambite, J.<nbsp>L.","Gupta, S.","Goel, A.","Muslea, M.","Lerman, K.","Mallick, P."],"bibtex":"@inproceedings{ knoblock12:eswc,\n  urlpresentation = {http://www.isi.edu/integration/slides/knoblock12-eswc-slides.pdf},\n  title = {Semi-Automatically Mapping Structured Sources into the Semantic Web},\n  booktitle = {Proceedings of the Extended Semantic Web Conference},\n  author = {Craig A. Knoblock and Pedro Szekely and Jose Luis Ambite and Shubham Gupta and Aman Goel and Maria Muslea and Kristina Lerman and Parag Mallick},\n  year = {2012},\n  address = {Crete, Greece},\n  keywords = {\"Source Modeling\"},\n  urlpaper = {http://www.isi.edu/integration/papers/knoblock12-eswc.pdf}\n}","bibtype":"inproceedings","booktitle":"Proceedings of the Extended Semantic Web Conference","id":"knoblock12:eswc","key":"knoblock12:eswc","keywords":"\"Source Modeling\"","title":"Semi-Automatically Mapping Structured Sources into the Semantic Web","type":"inproceedings","urlpaper":"http://www.isi.edu/integration/papers/knoblock12-eswc.pdf","urlpresentation":"http://www.isi.edu/integration/slides/knoblock12-eswc-slides.pdf","year":"2012","role":"author","urls":{"paper":"http://www.isi.edu/integration/papers/knoblock12-eswc.pdf","presentation":"http://www.isi.edu/integration/slides/knoblock12-eswc-slides.pdf"},"bibbaseid":"knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-semiautomaticallymappingstructuredsourcesintothesemanticweb-2012","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"knoblock12:eswc\"> </a>Semi-Automatically Mapping Structured Sources into the Semantic Web.</span>\n\t<span class=\"bibbase_paper_author\">\nKnoblock, C.&nbsp;A.; Szekely, P.; Ambite, J.&nbsp;L.; Gupta, S.; Goel, A.; Muslea, M.; Lerman, K.;  and Mallick, P.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2012</span>. -->\n</span>\n\n\n\nIn\n<i>Proceedings of the Extended Semantic Web Conference</i>, Crete, Greece,  2012.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-semiautomaticallymappingstructuredsourcesintothesemanticweb-2012', 'http://www.isi.edu/integration/papers/knoblock12-eswc.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/papers/knoblock12-eswc.pdf\"\n     onclick=\"javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-semiautomaticallymappingstructuredsourcesintothesemanticweb-2012', 'http://www.isi.edu/integration/papers/knoblock12-eswc.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Semi-Automatically Mapping Structured Sources into the Semantic Web [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">paper</span></a> \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-semiautomaticallymappingstructuredsourcesintothesemanticweb-2012', 'http://www.isi.edu/integration/slides/knoblock12-eswc-slides.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/slides/knoblock12-eswc-slides.pdf\"\n     onclick=\"javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-semiautomaticallymappingstructuredsourcesintothesemanticweb-2012', 'http://www.isi.edu/integration/slides/knoblock12-eswc-slides.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Semi-Automatically Mapping Structured Sources into the Semantic Web [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">presentation</span></a> \n  \n  \n  <a href=\"javascript:showBib('knoblock12:eswc')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Semi-Automatically Mapping Structured Sources into the Semantic Web [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"author":["Taheriyan, Mohsen","Knoblock, Craig A.","Szekely, Pedro","Ambite, Jose Luis"],"author_short":["Taheriyan, M.","Knoblock, C.<nbsp>A.","Szekely, P.","Ambite, J.<nbsp>L."],"bibtex":"@inproceedings{ taheriyan12:lapis,\n  keywords = {\"Source modeling\"},\n  booktitle = {Proceedings of the ESWC 2012 Workshop on Linked APIs},\n  title = {Semi-Automatically Modeling Web APIs to Create Linked APIs},\n  year = {2012},\n  author = {Mohsen Taheriyan and Craig A. Knoblock and Pedro Szekely and Jose Luis Ambite},\n  urlpaper = {http://www.isi.edu/integration/papers/knoblock12-eswc.pdf}\n}","bibtype":"inproceedings","booktitle":"Proceedings of the ESWC 2012 Workshop on Linked APIs","id":"taheriyan12:lapis","key":"taheriyan12:lapis","keywords":"\"Source modeling\"","title":"Semi-Automatically Modeling Web APIs to Create Linked APIs","type":"inproceedings","urlpaper":"http://www.isi.edu/integration/papers/knoblock12-eswc.pdf","year":"2012","role":"author","urls":{"paper":"http://www.isi.edu/integration/papers/knoblock12-eswc.pdf"},"bibbaseid":"taheriyan-knoblock-szekely-ambite-semiautomaticallymodelingwebapistocreatelinkedapis-2012","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"taheriyan12:lapis\"> </a>Semi-Automatically Modeling Web APIs to Create Linked APIs.</span>\n\t<span class=\"bibbase_paper_author\">\nTaheriyan, M.; Knoblock, C.&nbsp;A.; Szekely, P.;  and Ambite, J.&nbsp;L.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2012</span>. -->\n</span>\n\n\n\nIn\n<i>Proceedings of the ESWC 2012 Workshop on Linked APIs</i>,  2012.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('taheriyan-knoblock-szekely-ambite-semiautomaticallymodelingwebapistocreatelinkedapis-2012', 'http://www.isi.edu/integration/papers/knoblock12-eswc.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/papers/knoblock12-eswc.pdf\"\n     onclick=\"javascript:log_download('taheriyan-knoblock-szekely-ambite-semiautomaticallymodelingwebapistocreatelinkedapis-2012', 'http://www.isi.edu/integration/papers/knoblock12-eswc.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Semi-Automatically Modeling Web APIs to Create Linked APIs [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">paper</span></a> \n  \n  \n  <a href=\"javascript:showBib('taheriyan12:lapis')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Semi-Automatically Modeling Web APIs to Create Linked APIs [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"author":["Wu, Bo","Szekely, Pedro","Knoblock, Craig A."],"author_short":["Wu, B.","Szekely, P.","Knoblock, C.<nbsp>A."],"bibtex":"@inproceedings{ wu12:iiweb,\n  keywords = {\"Data cleaning\"},\n  booktitle = {Ninth International Workshop on Information Integration on the Web (IIWeb 2012)},\n  title = {Learning Data Transformation Rules through Examples: Preliminary Results},\n  year = {2012},\n  author = {Bo Wu and Pedro Szekely and Craig A. Knoblock}\n}","bibtype":"inproceedings","booktitle":"Ninth International Workshop on Information Integration on the Web (IIWeb 2012)","id":"wu12:iiweb","key":"wu12:iiweb","keywords":"\"Data cleaning\"","title":"Learning Data Transformation Rules through Examples: Preliminary Results","type":"inproceedings","year":"2012","role":"author","urls":{},"bibbaseid":"wu-szekely-knoblock-learningdatatransformationrulesthroughexamplespreliminaryresults-2012","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"wu12:iiweb\"> </a>Learning Data Transformation Rules through Examples: Preliminary Results.</span>\n\t<span class=\"bibbase_paper_author\">\nWu, B.; Szekely, P.;  and Knoblock, C.&nbsp;A.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2012</span>. -->\n</span>\n\n\n\nIn\n<i>Ninth International Workshop on Information Integration on the Web (IIWeb 2012)</i>,  2012.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  \n  <a href=\"javascript:showBib('wu12:iiweb')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Learning Data Transformation Rules through Examples: Preliminary Results [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"author":["Tuchinda, Rattapoom","Knoblock, Craig A.","Szekely, Pedro"],"author_short":["Tuchinda, R.","Knoblock, C.<nbsp>A.","Szekely, P."],"bibtex":"@article{ tuchinda11:acmtw,\n  urllink = {http://dl.acm.org/citation.cfm?doid=1993053.1993058},\n  title = {Building Mashups by Demonstration},\n  journal = {ACM Transactions on the Web (TWEB)},\n  author = {Rattapoom Tuchinda and Craig A. Knoblock and Pedro Szekely},\n  number = {3},\n  month = {July},\n  volume = {5},\n  year = {2011},\n  keywords = {\"Mashup Construction\"},\n  urlpaper = {http://www.isi.edu/integration/papers/tuchinda11-acmtw.pdf}\n}","bibtype":"article","id":"tuchinda11:acmtw","journal":"ACM Transactions on the Web (TWEB)","key":"tuchinda11:acmtw","keywords":"\"Mashup Construction\"","month":"July","number":"3","title":"Building Mashups by Demonstration","type":"article","urllink":"http://dl.acm.org/citation.cfm?doid=1993053.1993058","urlpaper":"http://www.isi.edu/integration/papers/tuchinda11-acmtw.pdf","volume":"5","year":"2011","role":"author","urls":{"link":"http://dl.acm.org/citation.cfm?doid=1993053.1993058","paper":"http://www.isi.edu/integration/papers/tuchinda11-acmtw.pdf"},"bibbaseid":"tuchinda-knoblock-szekely-buildingmashupsbydemonstration-2011","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"tuchinda11:acmtw\"> </a>Building Mashups by Demonstration.</span>\n\t<span class=\"bibbase_paper_author\">\nTuchinda, R.; Knoblock, C.&nbsp;A.;  and Szekely, P.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2011</span>. -->\n</span>\n\n\n\n<i>ACM Transactions on the Web (TWEB)</i>,\n\n5(3).\n\nJuly 2011.\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('tuchinda-knoblock-szekely-buildingmashupsbydemonstration-2011', 'http://dl.acm.org/citation.cfm?doid=1993053.1993058')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://dl.acm.org/citation.cfm?doid=1993053.1993058\"\n     onclick=\"javascript:log_download('tuchinda-knoblock-szekely-buildingmashupsbydemonstration-2011', 'http://dl.acm.org/citation.cfm?doid=1993053.1993058')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/blank.png\"\n\t alt=\"Building Mashups by Demonstration [.1993058]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">link</span></a> \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('tuchinda-knoblock-szekely-buildingmashupsbydemonstration-2011', 'http://www.isi.edu/integration/papers/tuchinda11-acmtw.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/papers/tuchinda11-acmtw.pdf\"\n     onclick=\"javascript:log_download('tuchinda-knoblock-szekely-buildingmashupsbydemonstration-2011', 'http://www.isi.edu/integration/papers/tuchinda11-acmtw.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Building Mashups by Demonstration [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">paper</span></a> \n  \n  \n  <a href=\"javascript:showBib('tuchinda11:acmtw')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Building Mashups by Demonstration [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"address":"Bonn, Germany","author":["Knoblock, Craig A.","Szekely, Pedro","Ambite, Jose Luis","Gupta, Shubham","Goel, Aman","Muslea, Maria","Lerman, Kristina","Mallick, Parag"],"author_short":["Knoblock, C.<nbsp>A.","Szekely, P.","Ambite, J.<nbsp>L.","Gupta, S.","Goel, A.","Muslea, M.","Lerman, K.","Mallick, P."],"bibtex":"@inproceedings{ knoblock11:lisc,\n  urlpresentation = {http://www.isi.edu/integration/slides/knoblock11-lisc-slides.pdf},\n  urllink = {http://CEUR-WS.org/Vol-783/},\n  title = {Interactively Mapping Data Sources into the Semantic Web},\n  booktitle = {Proceedings of the First International Workshop on Linked Science 2011 in Conjunction with the 10th International Semantic Web Conference},\n  author = {Craig A. Knoblock and Pedro Szekely and Jose Luis Ambite and Shubham Gupta and Aman Goel and Maria Muslea and Kristina Lerman and Parag Mallick},\n  year = {2011},\n  address = {Bonn, Germany},\n  keywords = {\"Source Modeling\"},\n  urlpaper = {http://www.isi.edu/integration/papers/knoblock11-lisc.pdf}\n}","bibtype":"inproceedings","booktitle":"Proceedings of the First International Workshop on Linked Science 2011 in Conjunction with the 10th International Semantic Web Conference","id":"knoblock11:lisc","key":"knoblock11:lisc","keywords":"\"Source Modeling\"","title":"Interactively Mapping Data Sources into the Semantic Web","type":"inproceedings","urllink":"http://CEUR-WS.org/Vol-783/","urlpaper":"http://www.isi.edu/integration/papers/knoblock11-lisc.pdf","urlpresentation":"http://www.isi.edu/integration/slides/knoblock11-lisc-slides.pdf","year":"2011","role":"author","urls":{"link":"http://CEUR-WS.org/Vol-783/","paper":"http://www.isi.edu/integration/papers/knoblock11-lisc.pdf","presentation":"http://www.isi.edu/integration/slides/knoblock11-lisc-slides.pdf"},"bibbaseid":"knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"knoblock11:lisc\"> </a>Interactively Mapping Data Sources into the Semantic Web.</span>\n\t<span class=\"bibbase_paper_author\">\nKnoblock, C.&nbsp;A.; Szekely, P.; Ambite, J.&nbsp;L.; Gupta, S.; Goel, A.; Muslea, M.; Lerman, K.;  and Mallick, P.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2011</span>. -->\n</span>\n\n\n\nIn\n<i>Proceedings of the First International Workshop on Linked Science 2011 in Conjunction with the 10th International Semantic Web Conference</i>, Bonn, Germany,  2011.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011', 'http://CEUR-WS.org/Vol-783/')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://CEUR-WS.org/Vol-783/\"\n     onclick=\"javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011', 'http://CEUR-WS.org/Vol-783/')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/blank.png\"\n\t alt=\"Interactively Mapping Data Sources into the Semantic Web [.org/Vol-783/]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">link</span></a> \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011', 'http://www.isi.edu/integration/papers/knoblock11-lisc.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/papers/knoblock11-lisc.pdf\"\n     onclick=\"javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011', 'http://www.isi.edu/integration/papers/knoblock11-lisc.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Interactively Mapping Data Sources into the Semantic Web [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">paper</span></a> \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011', 'http://www.isi.edu/integration/slides/knoblock11-lisc-slides.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/slides/knoblock11-lisc-slides.pdf\"\n     onclick=\"javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011', 'http://www.isi.edu/integration/slides/knoblock11-lisc-slides.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Interactively Mapping Data Sources into the Semantic Web [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">presentation</span></a> \n  \n  \n  <a href=\"javascript:showBib('knoblock11:lisc')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Interactively Mapping Data Sources into the Semantic Web [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"author":["Gil, Yolanda","Szekely, Pedro","Villamizar, Sandra","Harmon, Thomas C.","Ratnakar, Varun","Gupta, Shubham","Muslea, Maria","Silva, Fabio","Knoblock, Craig A."],"author_short":["Gil, Y.","Szekely, P.","Villamizar, S.","Harmon, T.<nbsp>C.","Ratnakar, V.","Gupta, S.","Muslea, M.","Silva, F.","Knoblock, C.<nbsp>A."],"bibtex":"@inproceedings{ gil11:iswc,\n  urlpresentation = {http://www.isi.edu/integration/slides/gil11-iswc-slides.pdf},\n  title = {Mind Your Metadata: Exploiting Semantics for Configuration, Adaptation, and Provenance in Scientific Workflows},\n  booktitle = {Proceedings of the 10th International Semantic Web Conference (ISWC 2011)},\n  author = {Yolanda Gil and Pedro Szekely and Sandra Villamizar and Thomas C. Harmon and Varun Ratnakar and Shubham Gupta and Maria Muslea and Fabio Silva and Craig A. Knoblock},\n  year = {2011},\n  keywords = {\"Source Modeling\"},\n  urlpaper = {http://www.isi.edu/integration/papers/gil11-iswc.pdf}\n}","bibtype":"inproceedings","booktitle":"Proceedings of the 10th International Semantic Web Conference (ISWC 2011)","id":"gil11:iswc","key":"gil11:iswc","keywords":"\"Source Modeling\"","title":"Mind Your Metadata: Exploiting Semantics for Configuration, Adaptation, and Provenance in Scientific Workflows","type":"inproceedings","urlpaper":"http://www.isi.edu/integration/papers/gil11-iswc.pdf","urlpresentation":"http://www.isi.edu/integration/slides/gil11-iswc-slides.pdf","year":"2011","role":"author","urls":{"paper":"http://www.isi.edu/integration/papers/gil11-iswc.pdf","presentation":"http://www.isi.edu/integration/slides/gil11-iswc-slides.pdf"},"bibbaseid":"gil-szekely-villamizar-harmon-ratnakar-gupta-muslea-silva-knoblock-mindyourmetadataexploitingsemanticsforconfigurationadaptationandprovenanceinscientificworkflows-2011","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"gil11:iswc\"> </a>Mind Your Metadata: Exploiting Semantics for Configuration, Adaptation, and Provenance in Scientific Workflows.</span>\n\t<span class=\"bibbase_paper_author\">\nGil, Y.; Szekely, P.; Villamizar, S.; Harmon, T.&nbsp;C.; Ratnakar, V.; Gupta, S.; Muslea, M.; Silva, F.;  and Knoblock, C.&nbsp;A.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2011</span>. -->\n</span>\n\n\n\nIn\n<i>Proceedings of the 10th International Semantic Web Conference (ISWC 2011)</i>,  2011.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('gil-szekely-villamizar-harmon-ratnakar-gupta-muslea-silva-knoblock-mindyourmetadataexploitingsemanticsforconfigurationadaptationandprovenanceinscientificworkflows-2011', 'http://www.isi.edu/integration/papers/gil11-iswc.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/papers/gil11-iswc.pdf\"\n     onclick=\"javascript:log_download('gil-szekely-villamizar-harmon-ratnakar-gupta-muslea-silva-knoblock-mindyourmetadataexploitingsemanticsforconfigurationadaptationandprovenanceinscientificworkflows-2011', 'http://www.isi.edu/integration/papers/gil11-iswc.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Mind Your Metadata: Exploiting Semantics for Configuration, Adaptation, and Provenance in Scientific Workflows [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">paper</span></a> \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('gil-szekely-villamizar-harmon-ratnakar-gupta-muslea-silva-knoblock-mindyourmetadataexploitingsemanticsforconfigurationadaptationandprovenanceinscientificworkflows-2011', 'http://www.isi.edu/integration/slides/gil11-iswc-slides.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/slides/gil11-iswc-slides.pdf\"\n     onclick=\"javascript:log_download('gil-szekely-villamizar-harmon-ratnakar-gupta-muslea-silva-knoblock-mindyourmetadataexploitingsemanticsforconfigurationadaptationandprovenanceinscientificworkflows-2011', 'http://www.isi.edu/integration/slides/gil11-iswc-slides.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Mind Your Metadata: Exploiting Semantics for Configuration, Adaptation, and Provenance in Scientific Workflows [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">presentation</span></a> \n  \n  \n  <a href=\"javascript:showBib('gil11:iswc')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Mind Your Metadata: Exploiting Semantics for Configuration, Adaptation, and Provenance in Scientific Workflows [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"address":"San Francisco, CA","author":["Goel, Aman","Knoblock, Craig A.","Lerman, Kristina"],"author_short":["Goel, A.","Knoblock, C.<nbsp>A.","Lerman, K."],"bibtex":"@inproceedings{ goel11:aaai,\n  urlpresentation = {http://www.isi.edu/integration/slides/goel11-aaai-poster.pdf},\n  title = {Using Conditional Random Fields to Exploit Token Structure and Labels for Accurate Semantic Annotation},\n  booktitle = {Proceedings of the 25th National Conference on Artificial Intelligence (AAAI-11)},\n  author = {Aman Goel and Craig A. Knoblock and Kristina Lerman},\n  year = {2011},\n  address = {San Francisco, CA},\n  keywords = {\"Source Modeling\"},\n  urlpaper = {http://www.isi.edu/integration/papers/goel11-aaai.pdf}\n}","bibtype":"inproceedings","booktitle":"Proceedings of the 25th National Conference on Artificial Intelligence (AAAI-11)","id":"goel11:aaai","key":"goel11:aaai","keywords":"\"Source Modeling\"","title":"Using Conditional Random Fields to Exploit Token Structure and Labels for Accurate Semantic Annotation","type":"inproceedings","urlpaper":"http://www.isi.edu/integration/papers/goel11-aaai.pdf","urlpresentation":"http://www.isi.edu/integration/slides/goel11-aaai-poster.pdf","year":"2011","role":"author","urls":{"paper":"http://www.isi.edu/integration/papers/goel11-aaai.pdf","presentation":"http://www.isi.edu/integration/slides/goel11-aaai-poster.pdf"},"bibbaseid":"goel-knoblock-lerman-usingconditionalrandomfieldstoexploittokenstructureandlabelsforaccuratesemanticannotation-2011","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"goel11:aaai\"> </a>Using Conditional Random Fields to Exploit Token Structure and Labels for Accurate Semantic Annotation.</span>\n\t<span class=\"bibbase_paper_author\">\nGoel, A.; Knoblock, C.&nbsp;A.;  and Lerman, K.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2011</span>. -->\n</span>\n\n\n\nIn\n<i>Proceedings of the 25th National Conference on Artificial Intelligence (AAAI-11)</i>, San Francisco, CA,  2011.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('goel-knoblock-lerman-usingconditionalrandomfieldstoexploittokenstructureandlabelsforaccuratesemanticannotation-2011', 'http://www.isi.edu/integration/papers/goel11-aaai.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/papers/goel11-aaai.pdf\"\n     onclick=\"javascript:log_download('goel-knoblock-lerman-usingconditionalrandomfieldstoexploittokenstructureandlabelsforaccuratesemanticannotation-2011', 'http://www.isi.edu/integration/papers/goel11-aaai.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Using Conditional Random Fields to Exploit Token Structure and Labels for Accurate Semantic Annotation [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">paper</span></a> \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('goel-knoblock-lerman-usingconditionalrandomfieldstoexploittokenstructureandlabelsforaccuratesemanticannotation-2011', 'http://www.isi.edu/integration/slides/goel11-aaai-poster.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/slides/goel11-aaai-poster.pdf\"\n     onclick=\"javascript:log_download('goel-knoblock-lerman-usingconditionalrandomfieldstoexploittokenstructureandlabelsforaccuratesemanticannotation-2011', 'http://www.isi.edu/integration/slides/goel11-aaai-poster.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Using Conditional Random Fields to Exploit Token Structure and Labels for Accurate Semantic Annotation [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">presentation</span></a> \n  \n  \n  <a href=\"javascript:showBib('goel11:aaai')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Using Conditional Random Fields to Exploit Token Structure and Labels for Accurate Semantic Annotation [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"address":"Chicago, IL","author":["Szekely, Pedro","Knoblock, Craig A.","Gupta, Shubham","Taheriyan, Mohsen","Wu, Bo"],"author_short":["Szekely, P.","Knoblock, C.<nbsp>A.","Gupta, S.","Taheriyan, M.","Wu, B."],"bibtex":"@inproceedings{ szekely11:sso,\n  urlpresentation = {http://www.isi.edu/integration/slides/szekely11-sso-slides.pdf},\n  title = {Exploiting Semantics of Web Services for Geospatial Data Fusion},\n  booktitle = {Proceedings of the SIGSPATIAL International Workshop on Spatial Semantics and Ontologies (SSO 2011)},\n  author = {Pedro Szekely and Craig A. Knoblock and Shubham Gupta and Mohsen Taheriyan and Bo Wu},\n  year = {2011},\n  address = {Chicago, IL},\n  keywords = {\"Geospatial Fusion\"},\n  urlpaper = {http://www.isi.edu/integration/papers/szekely11-sso.pdf}\n}","bibtype":"inproceedings","booktitle":"Proceedings of the SIGSPATIAL International Workshop on Spatial Semantics and Ontologies (SSO 2011)","id":"szekely11:sso","key":"szekely11:sso","keywords":"\"Geospatial Fusion\"","title":"Exploiting Semantics of Web Services for Geospatial Data Fusion","type":"inproceedings","urlpaper":"http://www.isi.edu/integration/papers/szekely11-sso.pdf","urlpresentation":"http://www.isi.edu/integration/slides/szekely11-sso-slides.pdf","year":"2011","role":"author","urls":{"paper":"http://www.isi.edu/integration/papers/szekely11-sso.pdf","presentation":"http://www.isi.edu/integration/slides/szekely11-sso-slides.pdf"},"bibbaseid":"szekely-knoblock-gupta-taheriyan-wu-exploitingsemanticsofwebservicesforgeospatialdatafusion-2011","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"szekely11:sso\"> </a>Exploiting Semantics of Web Services for Geospatial Data Fusion.</span>\n\t<span class=\"bibbase_paper_author\">\nSzekely, P.; Knoblock, C.&nbsp;A.; Gupta, S.; Taheriyan, M.;  and Wu, B.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2011</span>. -->\n</span>\n\n\n\nIn\n<i>Proceedings of the SIGSPATIAL International Workshop on Spatial Semantics and Ontologies (SSO 2011)</i>, Chicago, IL,  2011.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('szekely-knoblock-gupta-taheriyan-wu-exploitingsemanticsofwebservicesforgeospatialdatafusion-2011', 'http://www.isi.edu/integration/papers/szekely11-sso.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/papers/szekely11-sso.pdf\"\n     onclick=\"javascript:log_download('szekely-knoblock-gupta-taheriyan-wu-exploitingsemanticsofwebservicesforgeospatialdatafusion-2011', 'http://www.isi.edu/integration/papers/szekely11-sso.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Exploiting Semantics of Web Services for Geospatial Data Fusion [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">paper</span></a> \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('szekely-knoblock-gupta-taheriyan-wu-exploitingsemanticsofwebservicesforgeospatialdatafusion-2011', 'http://www.isi.edu/integration/slides/szekely11-sso-slides.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/slides/szekely11-sso-slides.pdf\"\n     onclick=\"javascript:log_download('szekely-knoblock-gupta-taheriyan-wu-exploitingsemanticsofwebservicesforgeospatialdatafusion-2011', 'http://www.isi.edu/integration/slides/szekely11-sso-slides.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Exploiting Semantics of Web Services for Geospatial Data Fusion [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">presentation</span></a> \n  \n  \n  <a href=\"javascript:showBib('szekely11:sso')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Exploiting Semantics of Web Services for Geospatial Data Fusion [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"author":["Goel, Aman","Knoblock","A, Craig","Lerman, Kristina"],"author_short":["Goel, A.","Knoblock","A, C.","Lerman, K."],"bibtex":"@inproceedings{ goel12:exploiting,\n  author = {Goel, Aman and Knoblock, Craig A and Lerman, Kristina},\n  title = {{Exploiting Structure within Data for Accurate Labeling Using Conditional Random Fields}},\n  booktitle = {Proceedings of the 14th International Conference on Artificial Intelligence (ICAI)},\n  year = {2012},\n  rating = {0},\n  date-added = {2013-01-20T04:52:24GMT},\n  date-modified = {2013-05-04T01:25:59GMT},\n  uri = {̆rl{papers2://publication/uuid/D091747F-284E-4CED-9D63-85846F82BE46}}\n}","bibtype":"inproceedings","booktitle":"Proceedings of the 14th International Conference on Artificial Intelligence (ICAI)","date-added":"2013-01-20T04:52:24GMT","date-modified":"2013-05-04T01:25:59GMT","id":"goel12:exploiting","key":"goel12:exploiting","rating":"0","title":"Exploiting Structure within Data for Accurate Labeling Using Conditional Random Fields","type":"inproceedings","uri":"̆rlpapers2://publication/uuid/D091747F-284E-4CED-9D63-85846F82BE46","year":"2012","role":"author","urls":{},"bibbaseid":"goel--a-lerman-exploitingstructurewithindataforaccuratelabelingusingconditionalrandomfields-2012","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"goel12:exploiting\"> </a>Exploiting Structure within Data for Accurate Labeling Using Conditional Random Fields.</span>\n\t<span class=\"bibbase_paper_author\">\nGoel, A.; Knoblock; A, C.;  and Lerman, K.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2012</span>. -->\n</span>\n\n\n\nIn\n<i>Proceedings of the 14th International Conference on Artificial Intelligence (ICAI)</i>,  2012.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  \n  <a href=\"javascript:showBib('goel12:exploiting')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Exploiting Structure within Data for Accurate Labeling Using Conditional Random Fields [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"author":["Gupta, Shubham","Knoblock, Craig A."],"author_short":["Gupta, S.","Knoblock, C.<nbsp>A."],"bibtex":"@inproceedings{ gupta10:iscram,\n  urlpresentation = {http://www.isi.edu/integration/slides/gupta10-iscram-slides.pdf},\n  title = {Building Geospatial Mashups to Visualize Information for Crisis Management},\n  booktitle = {Proceedings of the 7th International Conference on Information Systems for Crisis Response and Management},\n  author = {Shubham Gupta and Craig A. Knoblock},\n  year = {2010},\n  keywords = {\"Mashup Construction\"},\n  urlpaper = {http://www.isi.edu/integration/papers/gupta10-iscram.pdf}\n}","bibtype":"inproceedings","booktitle":"Proceedings of the 7th International Conference on Information Systems for Crisis Response and Management","id":"gupta10:iscram","key":"gupta10:iscram","keywords":"\"Mashup Construction\"","title":"Building Geospatial Mashups to Visualize Information for Crisis Management","type":"inproceedings","urlpaper":"http://www.isi.edu/integration/papers/gupta10-iscram.pdf","urlpresentation":"http://www.isi.edu/integration/slides/gupta10-iscram-slides.pdf","year":"2010","role":"author","urls":{"paper":"http://www.isi.edu/integration/papers/gupta10-iscram.pdf","presentation":"http://www.isi.edu/integration/slides/gupta10-iscram-slides.pdf"},"bibbaseid":"gupta-knoblock-buildinggeospatialmashupstovisualizeinformationforcrisismanagement-2010","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"gupta10:iscram\"> </a>Building Geospatial Mashups to Visualize Information for Crisis Management.</span>\n\t<span class=\"bibbase_paper_author\">\nGupta, S.;  and Knoblock, C.&nbsp;A.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2010</span>. -->\n</span>\n\n\n\nIn\n<i>Proceedings of the 7th International Conference on Information Systems for Crisis Response and Management</i>,  2010.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('gupta-knoblock-buildinggeospatialmashupstovisualizeinformationforcrisismanagement-2010', 'http://www.isi.edu/integration/papers/gupta10-iscram.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/papers/gupta10-iscram.pdf\"\n     onclick=\"javascript:log_download('gupta-knoblock-buildinggeospatialmashupstovisualizeinformationforcrisismanagement-2010', 'http://www.isi.edu/integration/papers/gupta10-iscram.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Building Geospatial Mashups to Visualize Information for Crisis Management [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">paper</span></a> \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('gupta-knoblock-buildinggeospatialmashupstovisualizeinformationforcrisismanagement-2010', 'http://www.isi.edu/integration/slides/gupta10-iscram-slides.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/slides/gupta10-iscram-slides.pdf\"\n     onclick=\"javascript:log_download('gupta-knoblock-buildinggeospatialmashupstovisualizeinformationforcrisismanagement-2010', 'http://www.isi.edu/integration/slides/gupta10-iscram-slides.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Building Geospatial Mashups to Visualize Information for Crisis Management [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">presentation</span></a> \n  \n  \n  <a href=\"javascript:showBib('gupta10:iscram')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Building Geospatial Mashups to Visualize Information for Crisis Management [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"author":["Tuchinda, Rattapoom","Szekely, Pedro","Knoblock, Craig A."],"author_short":["Tuchinda, R.","Szekely, P.","Knoblock, C.<nbsp>A."],"bibtex":"@inproceedings{ tuchinda08:iui,\n  urlpresentation = {http://www.isi.edu/integration/slides/tuchinda08-iui-slides.pdf},\n  author = {Rattapoom Tuchinda and Pedro Szekely and Craig A. Knoblock},\n  booktitle = {Proceedings of the 2008 International Conference on Intelligent User Interface},\n  title = {Building Mashups by Example},\n  month = {January},\n  year = {2008},\n  keywords = {\"Mashup Construction\"},\n  urlpaper = {http://www.isi.edu/integration/papers/tuchinda08-iui.pdf}\n}","bibtype":"inproceedings","booktitle":"Proceedings of the 2008 International Conference on Intelligent User Interface","id":"tuchinda08:iui","key":"tuchinda08:iui","keywords":"\"Mashup Construction\"","month":"January","title":"Building Mashups by Example","type":"inproceedings","urlpaper":"http://www.isi.edu/integration/papers/tuchinda08-iui.pdf","urlpresentation":"http://www.isi.edu/integration/slides/tuchinda08-iui-slides.pdf","year":"2008","role":"author","urls":{"paper":"http://www.isi.edu/integration/papers/tuchinda08-iui.pdf","presentation":"http://www.isi.edu/integration/slides/tuchinda08-iui-slides.pdf"},"bibbaseid":"tuchinda-szekely-knoblock-buildingmashupsbyexample-2008","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"tuchinda08:iui\"> </a>Building Mashups by Example.</span>\n\t<span class=\"bibbase_paper_author\">\nTuchinda, R.; Szekely, P.;  and Knoblock, C.&nbsp;A.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2008</span>. -->\n</span>\n\n\n\nIn\n<i>Proceedings of the 2008 International Conference on Intelligent User Interface</i>, January 2008.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('tuchinda-szekely-knoblock-buildingmashupsbyexample-2008', 'http://www.isi.edu/integration/papers/tuchinda08-iui.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/papers/tuchinda08-iui.pdf\"\n     onclick=\"javascript:log_download('tuchinda-szekely-knoblock-buildingmashupsbyexample-2008', 'http://www.isi.edu/integration/papers/tuchinda08-iui.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Building Mashups by Example [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">paper</span></a> \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('tuchinda-szekely-knoblock-buildingmashupsbyexample-2008', 'http://www.isi.edu/integration/slides/tuchinda08-iui-slides.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/slides/tuchinda08-iui-slides.pdf\"\n     onclick=\"javascript:log_download('tuchinda-szekely-knoblock-buildingmashupsbyexample-2008', 'http://www.isi.edu/integration/slides/tuchinda08-iui-slides.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Building Mashups by Example [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">presentation</span></a> \n  \n  \n  <a href=\"javascript:showBib('tuchinda08:iui')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Building Mashups by Example [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"},{"author":["Tuchinda, Rattapoom","Szekely, Pedro","Knoblock, Craig A."],"author_short":["Tuchinda, R.","Szekely, P.","Knoblock, C.<nbsp>A."],"bibtex":"@inproceedings{ tuchinda07:iui,\n  urlpresentation = {http://www.isi.edu/integration/slides/tuchinda07-iui-slides.pdf},\n  author = {Rattapoom Tuchinda and Pedro Szekely and Craig A. Knoblock},\n  booktitle = {Proceedings of the International Conference on Intelligent User Interface},\n  title = {Building Data Integration Queries by Demonstration},\n  month = {January},\n  year = {2007},\n  keywords = {\"Mashup Construction\"},\n  urlpaper = {http://www.isi.edu/integration/papers/tuchinda07-iui.pdf}\n}","bibtype":"inproceedings","booktitle":"Proceedings of the International Conference on Intelligent User Interface","id":"tuchinda07:iui","key":"tuchinda07:iui","keywords":"\"Mashup Construction\"","month":"January","title":"Building Data Integration Queries by Demonstration","type":"inproceedings","urlpaper":"http://www.isi.edu/integration/papers/tuchinda07-iui.pdf","urlpresentation":"http://www.isi.edu/integration/slides/tuchinda07-iui-slides.pdf","year":"2007","role":"author","urls":{"paper":"http://www.isi.edu/integration/papers/tuchinda07-iui.pdf","presentation":"http://www.isi.edu/integration/slides/tuchinda07-iui-slides.pdf"},"bibbaseid":"tuchinda-szekely-knoblock-buildingdataintegrationqueriesbydemonstration-2007","html":"<div class=\"bibbase_paper\">\n\n\n<span class=\"bibbase_paper_titleauthoryear\">\n\t<span class=\"bibbase_paper_title\"><a name=\"tuchinda07:iui\"> </a>Building Data Integration Queries by Demonstration.</span>\n\t<span class=\"bibbase_paper_author\">\nTuchinda, R.; Szekely, P.;  and Knoblock, C.&nbsp;A.</span>\n\t<!-- <span class=\"bibbase_paper_year\">2007</span>. -->\n</span>\n\n\n\nIn\n<i>Proceedings of the International Conference on Intelligent User Interface</i>, January 2007.\n\n\n\n\n\n<br class=\"bibbase_paper_content\"/>\n\n<span class=\"bibbase_paper_content\">\n  \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('tuchinda-szekely-knoblock-buildingdataintegrationqueriesbydemonstration-2007', 'http://www.isi.edu/integration/papers/tuchinda07-iui.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/papers/tuchinda07-iui.pdf\"\n     onclick=\"javascript:log_download('tuchinda-szekely-knoblock-buildingdataintegrationqueriesbydemonstration-2007', 'http://www.isi.edu/integration/papers/tuchinda07-iui.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Building Data Integration Queries by Demonstration [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">paper</span></a> \n  \n  <!-- <i -->\n     <!-- onclick=\"javascript:log_download('tuchinda-szekely-knoblock-buildingdataintegrationqueriesbydemonstration-2007', 'http://www.isi.edu/integration/slides/tuchinda07-iui-slides.pdf')\">DEBUG -->\n  <!-- </i> -->\n\n  <a href=\"http://www.isi.edu/integration/slides/tuchinda07-iui-slides.pdf\"\n     onclick=\"javascript:log_download('tuchinda-szekely-knoblock-buildingdataintegrationqueriesbydemonstration-2007', 'http://www.isi.edu/integration/slides/tuchinda07-iui-slides.pdf')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/pdf.png\"\n\t alt=\"Building Data Integration Queries by Demonstration [.pdf]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\" ><span class=\"bibbase_icon_text\">presentation</span></a> \n  \n  \n  <a href=\"javascript:showBib('tuchinda07:iui')\">\n    <img src=\"http://www.bibbase.org/img/filetypes/bib.png\" \n\t alt=\"Building Data Integration Queries by Demonstration [bib]\" \n\t class=\"bibbase_icon\"\n\t style=\"width: 24px; height: 24px; border: 0px; vertical-align: text-top\"><span class=\"bibbase_icon_text\">Bibtex</span></a>\n  \n  &nbsp; \n\n  \n  \n  &nbsp;\n  \n  \n\n  \n  \n</span>\n\n<!--  -->\n\n</div>\n"}]
+    };
+  </script>
+
+ 
+
+
+  <div id="bibbase_header">
+
+    <ul class="nav nav-pills" >
+
+      <li style="font-size: larger;">
+	<a href="http://www.bibbase.org/rss?bib=isi.edu/integration/karma/karma-bib.bib">
+	  <i class="icon-rss"></i>
+	</a>
+      </li>
+
+      <li class="dropdown">
+	<a class="dropdown-toggle"
+	   data-toggle="dropdown"
+	   href="#">
+          Group by
+          <b class="caret"></b>
+	</a>
+	<ul class="dropdown-menu">
+    	  <li><a tabindex="-1" 
+		 href="javascript:groupby('type')">
+	      type</a>
+	  </li>
+    	  <li><a tabindex="-1" 
+		 href="javascript:groupby('year')">
+	      year</a>
+	  </li>
+    	  <li><a tabindex="-1" 
+		 href="javascript:groupby('author_short')">
+	      author</a>
+	  </li>
+	</ul>
+      </li>
+
+      <li>
+	<a href="javascript:toggleAll()">
+	  Toggle All
+	</a>
+      </li>
+
+      <li style="float: right; margin-right: 50px;">
+	<a href="http://bibbase.org">generated by 
+	  <img src="http://www.bibbase.org/img/bibbase_small.png" 
+	       style="vertical-align: top;"/>
+	</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div id="bibbase_body">
+  <div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="Szekely:2013vq"> </a>Connecting the Smithsonian American Art Museum to the Linked Data Cloud.</span>
+	<span class="bibbase_paper_author">
+Szekely, P.; Knoblock; A, C.; Fengyu, Y.; Zhu, X.; Fink, E.; Allen, R.;  and Goodlander, G.</span>
+	<!-- <span class="bibbase_paper_year">2013</span>. -->
+</span>
+
+
+
+In
+<i>Proceedings of the 10th Extended Semantic Web Conference</i>, Montpellier, May 2013.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('szekely--a-fengyu-zhu-fink-allen-goodlander-connectingthesmithsonianamericanartmuseumtothelinkeddatacloud-2013', 'http://www.isi.edu/~szekely/contents/papers/2013/eswc-2013-saam.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/~szekely/contents/papers/2013/eswc-2013-saam.pdf"
+     onclick="javascript:log_download('szekely--a-fengyu-zhu-fink-allen-goodlander-connectingthesmithsonianamericanartmuseumtothelinkeddatacloud-2013', 'http://www.isi.edu/~szekely/contents/papers/2013/eswc-2013-saam.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Connecting the Smithsonian American Art Museum to the Linked Data Cloud [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">paper</span></a> 
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('szekely--a-fengyu-zhu-fink-allen-goodlander-connectingthesmithsonianamericanartmuseumtothelinkeddatacloud-2013', 'http://slidesha.re/18vxMnn')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://slidesha.re/18vxMnn"
+     onclick="javascript:log_download('szekely--a-fengyu-zhu-fink-allen-goodlander-connectingthesmithsonianamericanartmuseumtothelinkeddatacloud-2013', 'http://slidesha.re/18vxMnn')">
+    <img src="http://www.bibbase.org/img/filetypes/blank.png"
+	 alt="Connecting the Smithsonian American Art Museum to the Linked Data Cloud [.re/18vxMnn]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">slides</span></a> 
+  
+  
+  <a href="javascript:showBib('Szekely:2013vq')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Connecting the Smithsonian American Art Museum to the Linked Data Cloud [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
 </div>
+<div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="tuchinda11:acmtw"> </a>Building Mashups by Demonstration.</span>
+	<span class="bibbase_paper_author">
+Tuchinda, R.; Knoblock, C.&nbsp;A.;  and Szekely, P.</span>
+	<!-- <span class="bibbase_paper_year">2011</span>. -->
+</span>
+
+
+
+<i>ACM Transactions on the Web (TWEB)</i>,
+
+5(3).
+
+July 2011.
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('tuchinda-knoblock-szekely-buildingmashupsbydemonstration-2011', 'http://dl.acm.org/citation.cfm?doid=1993053.1993058')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://dl.acm.org/citation.cfm?doid=1993053.1993058"
+     onclick="javascript:log_download('tuchinda-knoblock-szekely-buildingmashupsbydemonstration-2011', 'http://dl.acm.org/citation.cfm?doid=1993053.1993058')">
+    <img src="http://www.bibbase.org/img/filetypes/blank.png"
+	 alt="Building Mashups by Demonstration [.1993058]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">link</span></a> 
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('tuchinda-knoblock-szekely-buildingmashupsbydemonstration-2011', 'http://www.isi.edu/integration/papers/tuchinda11-acmtw.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/papers/tuchinda11-acmtw.pdf"
+     onclick="javascript:log_download('tuchinda-knoblock-szekely-buildingmashupsbydemonstration-2011', 'http://www.isi.edu/integration/papers/tuchinda11-acmtw.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Building Mashups by Demonstration [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">paper</span></a> 
+  
+  
+  <a href="javascript:showBib('tuchinda11:acmtw')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Building Mashups by Demonstration [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
+</div>
+<div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="goel12:exploiting"> </a>Exploiting Structure within Data for Accurate Labeling Using Conditional Random Fields.</span>
+	<span class="bibbase_paper_author">
+Goel, A.; Knoblock; A, C.;  and Lerman, K.</span>
+	<!-- <span class="bibbase_paper_year">2012</span>. -->
+</span>
+
+
+
+In
+<i>Proceedings of the 14th International Conference on Artificial Intelligence (ICAI)</i>,  2012.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  
+  <a href="javascript:showBib('goel12:exploiting')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Exploiting Structure within Data for Accurate Labeling Using Conditional Random Fields [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
+</div>
+<div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="taheriyan12:iswc"> </a>Rapidly Integrating Services into the Linked Data Cloud.</span>
+	<span class="bibbase_paper_author">
+Taheriyan, M.; Knoblock, C.&nbsp;A.; Szekely, P.;  and Ambite, J.&nbsp;L.</span>
+	<!-- <span class="bibbase_paper_year">2012</span>. -->
+</span>
+
+
+
+In
+<i>Proceedings of the 11th International Semantic Web Conference (ISWC 2012)</i>,  2012.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('taheriyan-knoblock-szekely-ambite-rapidlyintegratingservicesintothelinkeddatacloud-2012', 'http://www.isi.edu/~szekely/contents/papers/2012/iswc2012_cameraready_34.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/~szekely/contents/papers/2012/iswc2012_cameraready_34.pdf"
+     onclick="javascript:log_download('taheriyan-knoblock-szekely-ambite-rapidlyintegratingservicesintothelinkeddatacloud-2012', 'http://www.isi.edu/~szekely/contents/papers/2012/iswc2012_cameraready_34.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Rapidly Integrating Services into the Linked Data Cloud [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">paper</span></a> 
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('taheriyan-knoblock-szekely-ambite-rapidlyintegratingservicesintothelinkeddatacloud-2012', 'http://www.isi.edu/integration/karma/other-materials/taheriyan/gss2012-poster.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/karma/other-materials/taheriyan/gss2012-poster.pdf"
+     onclick="javascript:log_download('taheriyan-knoblock-szekely-ambite-rapidlyintegratingservicesintothelinkeddatacloud-2012', 'http://www.isi.edu/integration/karma/other-materials/taheriyan/gss2012-poster.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Rapidly Integrating Services into the Linked Data Cloud [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">poster</span></a> 
+  
+  
+  <a href="javascript:showBib('taheriyan12:iswc')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Rapidly Integrating Services into the Linked Data Cloud [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
+</div>
+<div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="knoblock11:lisc"> </a>Interactively Mapping Data Sources into the Semantic Web.</span>
+	<span class="bibbase_paper_author">
+Knoblock, C.&nbsp;A.; Szekely, P.; Ambite, J.&nbsp;L.; Gupta, S.; Goel, A.; Muslea, M.; Lerman, K.;  and Mallick, P.</span>
+	<!-- <span class="bibbase_paper_year">2011</span>. -->
+</span>
+
+
+
+In
+<i>Proceedings of the First International Workshop on Linked Science 2011 in Conjunction with the 10th International Semantic Web Conference</i>, Bonn, Germany,  2011.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011', 'http://CEUR-WS.org/Vol-783/')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://CEUR-WS.org/Vol-783/"
+     onclick="javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011', 'http://CEUR-WS.org/Vol-783/')">
+    <img src="http://www.bibbase.org/img/filetypes/blank.png"
+	 alt="Interactively Mapping Data Sources into the Semantic Web [.org/Vol-783/]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">link</span></a> 
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011', 'http://www.isi.edu/integration/papers/knoblock11-lisc.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/papers/knoblock11-lisc.pdf"
+     onclick="javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011', 'http://www.isi.edu/integration/papers/knoblock11-lisc.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Interactively Mapping Data Sources into the Semantic Web [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">paper</span></a> 
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011', 'http://www.isi.edu/integration/slides/knoblock11-lisc-slides.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/slides/knoblock11-lisc-slides.pdf"
+     onclick="javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-interactivelymappingdatasourcesintothesemanticweb-2011', 'http://www.isi.edu/integration/slides/knoblock11-lisc-slides.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Interactively Mapping Data Sources into the Semantic Web [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">presentation</span></a> 
+  
+  
+  <a href="javascript:showBib('knoblock11:lisc')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Interactively Mapping Data Sources into the Semantic Web [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
+</div>
+<div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="gupta10:iscram"> </a>Building Geospatial Mashups to Visualize Information for Crisis Management.</span>
+	<span class="bibbase_paper_author">
+Gupta, S.;  and Knoblock, C.&nbsp;A.</span>
+	<!-- <span class="bibbase_paper_year">2010</span>. -->
+</span>
+
+
+
+In
+<i>Proceedings of the 7th International Conference on Information Systems for Crisis Response and Management</i>,  2010.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('gupta-knoblock-buildinggeospatialmashupstovisualizeinformationforcrisismanagement-2010', 'http://www.isi.edu/integration/papers/gupta10-iscram.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/papers/gupta10-iscram.pdf"
+     onclick="javascript:log_download('gupta-knoblock-buildinggeospatialmashupstovisualizeinformationforcrisismanagement-2010', 'http://www.isi.edu/integration/papers/gupta10-iscram.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Building Geospatial Mashups to Visualize Information for Crisis Management [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">paper</span></a> 
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('gupta-knoblock-buildinggeospatialmashupstovisualizeinformationforcrisismanagement-2010', 'http://www.isi.edu/integration/slides/gupta10-iscram-slides.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/slides/gupta10-iscram-slides.pdf"
+     onclick="javascript:log_download('gupta-knoblock-buildinggeospatialmashupstovisualizeinformationforcrisismanagement-2010', 'http://www.isi.edu/integration/slides/gupta10-iscram-slides.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Building Geospatial Mashups to Visualize Information for Crisis Management [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">presentation</span></a> 
+  
+  
+  <a href="javascript:showBib('gupta10:iscram')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Building Geospatial Mashups to Visualize Information for Crisis Management [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
+</div>
+<div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="knoblock12:eswc"> </a>Semi-Automatically Mapping Structured Sources into the Semantic Web.</span>
+	<span class="bibbase_paper_author">
+Knoblock, C.&nbsp;A.; Szekely, P.; Ambite, J.&nbsp;L.; Gupta, S.; Goel, A.; Muslea, M.; Lerman, K.;  and Mallick, P.</span>
+	<!-- <span class="bibbase_paper_year">2012</span>. -->
+</span>
+
+
+
+In
+<i>Proceedings of the Extended Semantic Web Conference</i>, Crete, Greece,  2012.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-semiautomaticallymappingstructuredsourcesintothesemanticweb-2012', 'http://www.isi.edu/integration/papers/knoblock12-eswc.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/papers/knoblock12-eswc.pdf"
+     onclick="javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-semiautomaticallymappingstructuredsourcesintothesemanticweb-2012', 'http://www.isi.edu/integration/papers/knoblock12-eswc.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Semi-Automatically Mapping Structured Sources into the Semantic Web [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">paper</span></a> 
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-semiautomaticallymappingstructuredsourcesintothesemanticweb-2012', 'http://www.isi.edu/integration/slides/knoblock12-eswc-slides.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/slides/knoblock12-eswc-slides.pdf"
+     onclick="javascript:log_download('knoblock-szekely-ambite-gupta-goel-muslea-lerman-mallick-semiautomaticallymappingstructuredsourcesintothesemanticweb-2012', 'http://www.isi.edu/integration/slides/knoblock12-eswc-slides.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Semi-Automatically Mapping Structured Sources into the Semantic Web [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">presentation</span></a> 
+  
+  
+  <a href="javascript:showBib('knoblock12:eswc')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Semi-Automatically Mapping Structured Sources into the Semantic Web [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
+</div>
+<div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="gil11:iswc"> </a>Mind Your Metadata: Exploiting Semantics for Configuration, Adaptation, and Provenance in Scientific Workflows.</span>
+	<span class="bibbase_paper_author">
+Gil, Y.; Szekely, P.; Villamizar, S.; Harmon, T.&nbsp;C.; Ratnakar, V.; Gupta, S.; Muslea, M.; Silva, F.;  and Knoblock, C.&nbsp;A.</span>
+	<!-- <span class="bibbase_paper_year">2011</span>. -->
+</span>
+
+
+
+In
+<i>Proceedings of the 10th International Semantic Web Conference (ISWC 2011)</i>,  2011.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('gil-szekely-villamizar-harmon-ratnakar-gupta-muslea-silva-knoblock-mindyourmetadataexploitingsemanticsforconfigurationadaptationandprovenanceinscientificworkflows-2011', 'http://www.isi.edu/integration/papers/gil11-iswc.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/papers/gil11-iswc.pdf"
+     onclick="javascript:log_download('gil-szekely-villamizar-harmon-ratnakar-gupta-muslea-silva-knoblock-mindyourmetadataexploitingsemanticsforconfigurationadaptationandprovenanceinscientificworkflows-2011', 'http://www.isi.edu/integration/papers/gil11-iswc.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Mind Your Metadata: Exploiting Semantics for Configuration, Adaptation, and Provenance in Scientific Workflows [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">paper</span></a> 
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('gil-szekely-villamizar-harmon-ratnakar-gupta-muslea-silva-knoblock-mindyourmetadataexploitingsemanticsforconfigurationadaptationandprovenanceinscientificworkflows-2011', 'http://www.isi.edu/integration/slides/gil11-iswc-slides.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/slides/gil11-iswc-slides.pdf"
+     onclick="javascript:log_download('gil-szekely-villamizar-harmon-ratnakar-gupta-muslea-silva-knoblock-mindyourmetadataexploitingsemanticsforconfigurationadaptationandprovenanceinscientificworkflows-2011', 'http://www.isi.edu/integration/slides/gil11-iswc-slides.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Mind Your Metadata: Exploiting Semantics for Configuration, Adaptation, and Provenance in Scientific Workflows [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">presentation</span></a> 
+  
+  
+  <a href="javascript:showBib('gil11:iswc')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Mind Your Metadata: Exploiting Semantics for Configuration, Adaptation, and Provenance in Scientific Workflows [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
+</div>
+<div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="tuchinda08:iui"> </a>Building Mashups by Example.</span>
+	<span class="bibbase_paper_author">
+Tuchinda, R.; Szekely, P.;  and Knoblock, C.&nbsp;A.</span>
+	<!-- <span class="bibbase_paper_year">2008</span>. -->
+</span>
+
+
+
+In
+<i>Proceedings of the 2008 International Conference on Intelligent User Interface</i>, January 2008.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('tuchinda-szekely-knoblock-buildingmashupsbyexample-2008', 'http://www.isi.edu/integration/papers/tuchinda08-iui.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/papers/tuchinda08-iui.pdf"
+     onclick="javascript:log_download('tuchinda-szekely-knoblock-buildingmashupsbyexample-2008', 'http://www.isi.edu/integration/papers/tuchinda08-iui.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Building Mashups by Example [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">paper</span></a> 
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('tuchinda-szekely-knoblock-buildingmashupsbyexample-2008', 'http://www.isi.edu/integration/slides/tuchinda08-iui-slides.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/slides/tuchinda08-iui-slides.pdf"
+     onclick="javascript:log_download('tuchinda-szekely-knoblock-buildingmashupsbyexample-2008', 'http://www.isi.edu/integration/slides/tuchinda08-iui-slides.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Building Mashups by Example [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">presentation</span></a> 
+  
+  
+  <a href="javascript:showBib('tuchinda08:iui')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Building Mashups by Example [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
+</div>
+<div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="taheriyan12:lapis"> </a>Semi-Automatically Modeling Web APIs to Create Linked APIs.</span>
+	<span class="bibbase_paper_author">
+Taheriyan, M.; Knoblock, C.&nbsp;A.; Szekely, P.;  and Ambite, J.&nbsp;L.</span>
+	<!-- <span class="bibbase_paper_year">2012</span>. -->
+</span>
+
+
+
+In
+<i>Proceedings of the ESWC 2012 Workshop on Linked APIs</i>,  2012.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('taheriyan-knoblock-szekely-ambite-semiautomaticallymodelingwebapistocreatelinkedapis-2012', 'http://www.isi.edu/integration/papers/knoblock12-eswc.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/papers/knoblock12-eswc.pdf"
+     onclick="javascript:log_download('taheriyan-knoblock-szekely-ambite-semiautomaticallymodelingwebapistocreatelinkedapis-2012', 'http://www.isi.edu/integration/papers/knoblock12-eswc.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Semi-Automatically Modeling Web APIs to Create Linked APIs [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">paper</span></a> 
+  
+  
+  <a href="javascript:showBib('taheriyan12:lapis')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Semi-Automatically Modeling Web APIs to Create Linked APIs [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
+</div>
+<div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="goel11:aaai"> </a>Using Conditional Random Fields to Exploit Token Structure and Labels for Accurate Semantic Annotation.</span>
+	<span class="bibbase_paper_author">
+Goel, A.; Knoblock, C.&nbsp;A.;  and Lerman, K.</span>
+	<!-- <span class="bibbase_paper_year">2011</span>. -->
+</span>
+
+
+
+In
+<i>Proceedings of the 25th National Conference on Artificial Intelligence (AAAI-11)</i>, San Francisco, CA,  2011.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('goel-knoblock-lerman-usingconditionalrandomfieldstoexploittokenstructureandlabelsforaccuratesemanticannotation-2011', 'http://www.isi.edu/integration/papers/goel11-aaai.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/papers/goel11-aaai.pdf"
+     onclick="javascript:log_download('goel-knoblock-lerman-usingconditionalrandomfieldstoexploittokenstructureandlabelsforaccuratesemanticannotation-2011', 'http://www.isi.edu/integration/papers/goel11-aaai.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Using Conditional Random Fields to Exploit Token Structure and Labels for Accurate Semantic Annotation [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">paper</span></a> 
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('goel-knoblock-lerman-usingconditionalrandomfieldstoexploittokenstructureandlabelsforaccuratesemanticannotation-2011', 'http://www.isi.edu/integration/slides/goel11-aaai-poster.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/slides/goel11-aaai-poster.pdf"
+     onclick="javascript:log_download('goel-knoblock-lerman-usingconditionalrandomfieldstoexploittokenstructureandlabelsforaccuratesemanticannotation-2011', 'http://www.isi.edu/integration/slides/goel11-aaai-poster.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Using Conditional Random Fields to Exploit Token Structure and Labels for Accurate Semantic Annotation [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">presentation</span></a> 
+  
+  
+  <a href="javascript:showBib('goel11:aaai')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Using Conditional Random Fields to Exploit Token Structure and Labels for Accurate Semantic Annotation [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
+</div>
+<div class="bibbase_paper" id="id_2007">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="tuchinda07:iui"> </a>Building Data Integration Queries by Demonstration.</span>
+	<span class="bibbase_paper_author">
+Tuchinda, R.; Szekely, P.;  and Knoblock, C.&nbsp;A.</span>
+	<!-- <span class="bibbase_paper_year">2007</span>. -->
+</span>
+
+
+
+In
+<i>Proceedings of the International Conference on Intelligent User Interface</i>, January 2007.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('tuchinda-szekely-knoblock-buildingdataintegrationqueriesbydemonstration-2007', 'http://www.isi.edu/integration/papers/tuchinda07-iui.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/papers/tuchinda07-iui.pdf"
+     onclick="javascript:log_download('tuchinda-szekely-knoblock-buildingdataintegrationqueriesbydemonstration-2007', 'http://www.isi.edu/integration/papers/tuchinda07-iui.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Building Data Integration Queries by Demonstration [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">paper</span></a> 
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('tuchinda-szekely-knoblock-buildingdataintegrationqueriesbydemonstration-2007', 'http://www.isi.edu/integration/slides/tuchinda07-iui-slides.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/slides/tuchinda07-iui-slides.pdf"
+     onclick="javascript:log_download('tuchinda-szekely-knoblock-buildingdataintegrationqueriesbydemonstration-2007', 'http://www.isi.edu/integration/slides/tuchinda07-iui-slides.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Building Data Integration Queries by Demonstration [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">presentation</span></a> 
+  
+  
+  <a href="javascript:showBib('tuchinda07:iui')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Building Data Integration Queries by Demonstration [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
+</div>
+<div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="wu12:iiweb"> </a>Learning Data Transformation Rules through Examples: Preliminary Results.</span>
+	<span class="bibbase_paper_author">
+Wu, B.; Szekely, P.;  and Knoblock, C.&nbsp;A.</span>
+	<!-- <span class="bibbase_paper_year">2012</span>. -->
+</span>
+
+
+
+In
+<i>Ninth International Workshop on Information Integration on the Web (IIWeb 2012)</i>,  2012.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  
+  <a href="javascript:showBib('wu12:iiweb')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Learning Data Transformation Rules through Examples: Preliminary Results [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
+</div>
+<div class="bibbase_paper">
+
+
+<span class="bibbase_paper_titleauthoryear">
+	<span class="bibbase_paper_title"><a name="szekely11:sso"> </a>Exploiting Semantics of Web Services for Geospatial Data Fusion.</span>
+	<span class="bibbase_paper_author">
+Szekely, P.; Knoblock, C.&nbsp;A.; Gupta, S.; Taheriyan, M.;  and Wu, B.</span>
+	<!-- <span class="bibbase_paper_year">2011</span>. -->
+</span>
+
+
+
+In
+<i>Proceedings of the SIGSPATIAL International Workshop on Spatial Semantics and Ontologies (SSO 2011)</i>, Chicago, IL,  2011.
+
+
+
+
+
+<br class="bibbase_paper_content"/>
+
+<span class="bibbase_paper_content">
+  
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('szekely-knoblock-gupta-taheriyan-wu-exploitingsemanticsofwebservicesforgeospatialdatafusion-2011', 'http://www.isi.edu/integration/papers/szekely11-sso.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/papers/szekely11-sso.pdf"
+     onclick="javascript:log_download('szekely-knoblock-gupta-taheriyan-wu-exploitingsemanticsofwebservicesforgeospatialdatafusion-2011', 'http://www.isi.edu/integration/papers/szekely11-sso.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Exploiting Semantics of Web Services for Geospatial Data Fusion [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">paper</span></a> 
+  
+  <!-- <i -->
+     <!-- onclick="javascript:log_download('szekely-knoblock-gupta-taheriyan-wu-exploitingsemanticsofwebservicesforgeospatialdatafusion-2011', 'http://www.isi.edu/integration/slides/szekely11-sso-slides.pdf')">DEBUG -->
+  <!-- </i> -->
+
+  <a href="http://www.isi.edu/integration/slides/szekely11-sso-slides.pdf"
+     onclick="javascript:log_download('szekely-knoblock-gupta-taheriyan-wu-exploitingsemanticsofwebservicesforgeospatialdatafusion-2011', 'http://www.isi.edu/integration/slides/szekely11-sso-slides.pdf')">
+    <img src="http://www.bibbase.org/img/filetypes/pdf.png"
+	 alt="Exploiting Semantics of Web Services for Geospatial Data Fusion [.pdf]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" ><span class="bibbase_icon_text">presentation</span></a> 
+  
+  
+  <a href="javascript:showBib('szekely11:sso')">
+    <img src="http://www.bibbase.org/img/filetypes/bib.png" 
+	 alt="Exploiting Semantics of Web Services for Geospatial Data Fusion [bib]" 
+	 class="bibbase_icon"
+	 style="width: 24px; height: 24px; border: 0px; vertical-align: text-top"><span class="bibbase_icon_text">Bibtex</span></a>
+  
+  &nbsp; 
+
+  
+  
+  &nbsp;
+  
+  
+
+  
+  
+</span>
+
+<!--  -->
+
 </div>
 
-<div class='bibbase_group'><div class='bibbase_group' onclick='toggleFold("id_2012")' title='fold/unfold'>&nbsp;<img id="icon_id_2012" src="http://www.bibbase.org/resources/unfolded.gif" alt="id_2012unfolded.gif" />&nbsp;2012 <span class='bibbase_group_count'>(5)</span></div></div><div id="id_2012" class="bibbase_group_body">
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/taheriyan12:iswc.html'" style="cursor: pointer; cursor: hand;">Rapidly Integrating Services into the Linked Data Cloud.</span> <span class='bibbase_paper_author'>Taheriyan, M.; Knoblock, C. A.; Szekely, P.; and Ambite, J. L.</span> <span class='bibbase_paper_year'>2012.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Proceedings of the 11th International Semantic Web Conference (ISWC 2012)</span>.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://www.isi.edu/integration/karma/other-materials/taheriyan/gss2012-poster.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/karma/other-materials/taheriyan/gss2012-poster.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Poster [PDF]" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Poster</span></a> <a href="http://www.isi.edu/~szekely/contents/papers/2012/iswc2012_cameraready_34.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/~szekely/contents/papers/2012/iswc2012_cameraready_34.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Paper [PDF]" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Paper</span></a> <a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/taheriyan12:iswc.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Paper [bib]" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> &nbsp; <span class='bibbase_stats_paper' style='color: #777;'><span id='span_stats_paper_http___www_isi_edu__szekely_contents_papers_2012_iswc2012_cameraready_34_pdf'></span></span> &nbsp;</span> <br/>
-</div>
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/goel12:exploiting.html'" style="cursor: pointer; cursor: hand;">Exploiting Structure within Data for Accurate Labeling Using Conditional Random Fields.</span> <span class='bibbase_paper_author'>Goel, A.; Knoblock; A, C.; and Lerman, K.</span> <span class='bibbase_paper_year'>2012.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Proceedings of the 14th International Conference on Artificial Intelligence (ICAI)</span>.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/goel12:exploiting.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Exploiting Structure within Data for Accurate Labeling Using Conditional Random Fields [bib]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> </span> <br/>
-</div>
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/knoblock12:eswc.html'" style="cursor: pointer; cursor: hand;">Semi-Automatically Mapping Structured Sources into the Semantic Web.</span> <span class='bibbase_paper_author'>Knoblock, C. A.; Szekely, P.; Ambite, J. L.; Gupta, S.; Goel, A.; Muslea, M.; Lerman, K.; and Mallick, P.</span> <span class='bibbase_paper_year'>2012.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Proceedings of the Extended Semantic Web Conference</span>, Crete, Greece.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://www.isi.edu/integration/slides/knoblock12-eswc-slides.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/slides/knoblock12-eswc-slides.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Presentation [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Presentation</span></a> <a href="http://www.isi.edu/integration/papers/knoblock12-eswc.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/papers/knoblock12-eswc.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Paper [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Paper</span></a> <a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/knoblock12:eswc.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Paper [bib]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> &nbsp; <span class='bibbase_stats_paper' style='color: #777;'><span id='span_stats_paper_http___www_isi_edu_integration_papers_knoblock12_eswc_pdf'></span></span> &nbsp;</span> <br/>
-</div>
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/taheriyan12:lapis.html'" style="cursor: pointer; cursor: hand;">Semi-Automatically Modeling Web APIs to Create Linked APIs.</span> <span class='bibbase_paper_author'>Taheriyan, M.; Knoblock, C. A.; Szekely, P.; and Ambite, J. L.</span> <span class='bibbase_paper_year'>2012.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Proceedings of the ESWC 2012 Workshop on Linked APIs</span>.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://www.isi.edu/integration/papers/knoblock12-eswc.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/papers/knoblock12-eswc.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Paper [PDF]"  class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Paper</span></a> <a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/taheriyan12:lapis.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Paper [bib]" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> &nbsp; <span class='bibbase_stats_paper' style='color: #777;'><span id='span_stats_paper_http___www_isi_edu_integration_papers_knoblock12_eswc_pdf2'>
-</span></span> &nbsp;</span> <br/>
-</div>
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/wu12:iiweb.html'" style="cursor: pointer; cursor: hand;">Learning Data Transformation Rules through Examples: Preliminary Results.</span> <span class='bibbase_paper_author'>Wu, B.; Szekely, P.; and Knoblock, C. A.</span> <span class='bibbase_paper_year'>2012.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Ninth International Workshop on Information Integration on the Web (IIWeb 2012)</span>.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/wu12:iiweb.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Learning Data Transformation Rules through Examples: Preliminary Results [bib]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> </span> <br/>
-</div>
+  </div>
+
+
+  <!-- BibTex Modal -->
+  <div id="myModal" 
+       class="modal hide fade" 
+       tabindex="-1" 
+       role="dialog" 
+       aria-labelledby="myModalLabel" 
+       aria-hidden="true">
+    <!-- <div class="modal-header"> -->
+    <!--   <\!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -\-> -->
+    <!--   <h3 id="myModalLabel">BibTex</h3> -->
+    <!-- </div> -->
+    <div class="modal-body">
+      <pre style="white-space: pre-wrap">
+      </pre>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" 
+	      data-dismiss="modal" 
+	      aria-hidden="true">
+	Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Abstract Modal -->
+  <div id="abstractModal" 
+       class="modal hide fade" 
+       tabindex="-1" 
+       role="dialog" 
+       aria-labelledby="abstractModalLabel" 
+       aria-hidden="true">
+    <!-- <div class="modal-header"> -->
+    <!--   <\!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -\-> -->
+    <!--   <h3 id="myModalLabel">BibTex</h3> -->
+    <!-- </div> -->
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" 
+	      data-dismiss="modal" 
+	      aria-hidden="true">
+	Close
+      </button>
+    </div>
+  </div>
+
+  <iframe id="bibbase_controlframe"
+	  style="display: none;">
+  </iframe>
+
 </div>
 
-<div class='bibbase_group'><div class='bibbase_group' onclick='toggleFold("id_2011")' title='fold/unfold'>&nbsp;<img id="icon_id_2011" src="http://www.bibbase.org/resources/unfolded.gif" alt="id_2011unfolded.gif" />&nbsp;2011 <span class='bibbase_group_count'>(5)</span></div></div><div id="id_2011" class="bibbase_group_body">
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/gil11:iswc.html'" style="cursor: pointer; cursor: hand;">Mind Your Metadata: Exploiting Semantics for Configuration, Adaptation, and Provenance in Scientific Workflows.</span> <span class='bibbase_paper_author'>Gil, Y.; Szekely, P.; Villamizar, S.; Harmon, T. C.; Ratnakar, V.; Gupta, S.; Muslea, M.; Silva, F.; and Knoblock, C. A.</span> <span class='bibbase_paper_year'>2011.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Proceedings of the 10th International Semantic Web Conference (ISWC 2011)</span>.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://www.isi.edu/integration/slides/gil11-iswc-slides.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/slides/gil11-iswc-slides.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Presentation [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Presentation</span></a> <a href="http://www.isi.edu/integration/papers/gil11-iswc.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/papers/gil11-iswc.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Paper [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Paper</span></a> <a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/gil11:iswc.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Paper [bib]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> &nbsp; <span class='bibbase_stats_paper' style='color: #777;'><span id='span_stats_paper_http___www_isi_edu_integration_papers_gil11_iswc_pdf'></span></span> &nbsp;</span> <br/>
-</div>
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/tuchinda11:acmtw.html'" style="cursor: pointer; cursor: hand;">Building Mashups by Demonstration.</span> <span class='bibbase_paper_author'>Tuchinda, R.; Knoblock, C. A.; and Szekely, P.</span> <span class='bibbase_paper_year'>2011.</span></span>
-<span class='bibbase_paper_venue'>ACM Transactions on the Web (TWEB), 5(3):, July.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://dl.acm.org/citation.cfm?doid=1993053.1993058" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=dl.acm.org/citation.cfm?doid=1993053.1993058';"><img src="http://www.bibbase.org/resources/filetypes/html.png" alt="Link [http://dl.acm.org/citation.cfm?doid=1993053.1993058]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Link</span></a> <a href="http://www.isi.edu/integration/papers/tuchinda11-acmtw.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/papers/tuchinda11-acmtw.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Paper [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Paper</span></a> <a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/tuchinda11:acmtw.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Paper [bib]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> &nbsp; <span class='bibbase_stats_paper' style='color: #777;'><span id='span_stats_paper_http___www_isi_edu_integration_papers_tuchinda11_acmtw_pdf'></span></span> &nbsp;</span> <br/>
-</div>
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/knoblock11:lisc.html'" style="cursor: pointer; cursor: hand;">Interactively Mapping Data Sources into the Semantic Web.</span> <span class='bibbase_paper_author'>Knoblock, C. A.; Szekely, P.; Ambite, J. L.; Gupta, S.; Goel, A.; Muslea, M.; Lerman, K.; and Mallick, P.</span> <span class='bibbase_paper_year'>2011.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Proceedings of the First International Workshop on Linked Science 2011 in Conjunction with the 10th International Semantic Web Conference</span>, Bonn, Germany.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://www.isi.edu/integration/slides/knoblock11-lisc-slides.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/slides/knoblock11-lisc-slides.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Presentation [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Presentation</span></a> <a href="http://CEUR-WS.org/Vol-783/" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=CEUR-WS.org/Vol-783/';"><img src="http://www.bibbase.org/resources/filetypes/html.png" alt="Link [http://CEUR-WS.org/Vol-783/]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Link</span></a> <a href="http://www.isi.edu/integration/papers/knoblock11-lisc.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/papers/knoblock11-lisc.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Paper [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Paper</span></a> <a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/knoblock11:lisc.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Paper [bib]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> &nbsp; <span class='bibbase_stats_paper' style='color: #777;'><span id='span_stats_paper_http___www_isi_edu_integration_papers_knoblock11_lisc_pdf'></span></span> &nbsp;</span> <br/>
-</div>
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/goel11:aaai.html'" style="cursor: pointer; cursor: hand;">Using Conditional Random Fields to Exploit Token Structure and Labels for Accurate Semantic Annotation.</span> <span class='bibbase_paper_author'>Goel, A.; Knoblock, C. A.; and Lerman, K.</span> <span class='bibbase_paper_year'>2011.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Proceedings of the 25th National Conference on Artificial Intelligence (AAAI-11)</span>, San Francisco, CA.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://www.isi.edu/integration/slides/goel11-aaai-poster.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/slides/goel11-aaai-poster.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Presentation [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Presentation</span></a> <a href="http://www.isi.edu/integration/papers/goel11-aaai.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/papers/goel11-aaai.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Paper [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Paper</span></a> <a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/goel11:aaai.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Paper [bib]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> &nbsp; <span class='bibbase_stats_paper' style='color: #777;'><span id='span_stats_paper_http___www_isi_edu_integration_papers_goel11_aaai_pdf'></span></span> &nbsp;</span> <br/>
-</div>
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/szekely11:sso.html'" style="cursor: pointer; cursor: hand;">Exploiting Semantics of Web Services for Geospatial Data Fusion.</span> <span class='bibbase_paper_author'>Szekely, P.; Knoblock, C. A.; Gupta, S.; Taheriyan, M.; and Wu, B.</span> <span class='bibbase_paper_year'>2011.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Proceedings of the SIGSPATIAL International Workshop on Spatial Semantics and Ontologies (SSO 2011)</span>, Chicago, IL.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://www.isi.edu/integration/slides/szekely11-sso-slides.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/slides/szekely11-sso-slides.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Presentation [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Presentation</span></a> <a href="http://www.isi.edu/integration/papers/szekely11-sso.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/papers/szekely11-sso.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Paper [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Paper</span></a> <a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/szekely11:sso.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Paper [bib]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> &nbsp; <span class='bibbase_stats_paper' style='color: #777;'><span id='span_stats_paper_http___www_isi_edu_integration_papers_szekely11_sso_pdf'></span></span> &nbsp;</span> <br/>
-</div>
-</div>
-
-<div class='bibbase_group'><div class='bibbase_group' onclick='toggleFold("id_2010")' title='fold/unfold'>&nbsp;<img id="icon_id_2010" src="http://www.bibbase.org/resources/unfolded.gif" alt="id_2010unfolded.gif" />&nbsp;2010 <span class='bibbase_group_count'>(1)</span></div></div><div id="id_2010" class="bibbase_group_body">
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/gupta10:iscram.html'" style="cursor: pointer; cursor: hand;">Building Geospatial Mashups to Visualize Information for Crisis Management.</span> <span class='bibbase_paper_author'>Gupta, S., and Knoblock, C. A.</span> <span class='bibbase_paper_year'>2010.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Proceedings of the 7th International Conference on Information Systems for Crisis Response and Management</span>.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://www.isi.edu/integration/slides/gupta10-iscram-slides.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/slides/gupta10-iscram-slides.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Presentation [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Presentation</span></a> <a href="http://www.isi.edu/integration/papers/gupta10-iscram.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/papers/gupta10-iscram.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Paper [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Paper</span></a> <a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/gupta10:iscram.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Paper [bib]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> &nbsp; <span class='bibbase_stats_paper' style='color: #777;'><span id='span_stats_paper_http___www_isi_edu_integration_papers_gupta10_iscram_pdf'></span></span> &nbsp;</span> <br/>
-</div>
-</div>
-
-<div class='bibbase_group'><div class='bibbase_group' onclick='toggleFold("id_2008")' title='fold/unfold'>&nbsp;<img id="icon_id_2008" src="http://www.bibbase.org/resources/unfolded.gif" alt="id_2008unfolded.gif" />&nbsp;2008 <span class='bibbase_group_count'>(1)</span></div></div><div id="id_2008" class="bibbase_group_body">
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/tuchinda08:iui.html'" style="cursor: pointer; cursor: hand;">Building Mashups by Example.</span> <span class='bibbase_paper_author'>Tuchinda, R.; Szekely, P.; and Knoblock, C. A.</span> <span class='bibbase_paper_year'>2008.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Proceedings of the 2008 International Conference on Intelligent User Interface</span>, January.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://www.isi.edu/integration/slides/tuchinda08-iui-slides.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/slides/tuchinda08-iui-slides.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Presentation [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Presentation</span></a> <a href="http://www.isi.edu/integration/papers/tuchinda08-iui.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/papers/tuchinda08-iui.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Paper [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Paper</span></a> <a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/tuchinda08:iui.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Paper [bib]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> &nbsp; <span class='bibbase_stats_paper' style='color: #777;'><span id='span_stats_paper_http___www_isi_edu_integration_papers_tuchinda08_iui_pdf'></span></span> &nbsp;</span> <br/>
-</div>
-</div>
-
-<div class='bibbase_group'><div class='bibbase_group' onclick='toggleFold("id_2007")' title='fold/unfold' >&nbsp;<img id="icon_id_2007" src="http://www.bibbase.org/resources/unfolded.gif" alt="id_2007unfolded.gif" />&nbsp;2007 <span class='bibbase_group_count'>(1)</span></div></div><div id="id_2007" class="bibbase_group_body">
-<div class='bibbase_paper'>
-<span class='bibbase_paper_titleauthoryear'><span class='bibbase_paper_title' onclick="window.location.href='http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/tuchinda07:iui.html'" >Building Data Integration Queries by Demonstration.</span> <span class='bibbase_paper_author'>Tuchinda, R.; Szekely, P.; and Knoblock, C. A.</span> <span class='bibbase_paper_year'>2007.</span></span>
-<span class='bibbase_paper_venue'>In <span class='bibbase_paper_book'>Proceedings of the International Conference on Intelligent User Interface</span>, January.</span><br class='bibbase_paper_content'/><span class='bibbase_paper_content'><a href="http://www.isi.edu/integration/slides/tuchinda07-iui-slides.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/slides/tuchinda07-iui-slides.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Presentation [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Presentation</span></a> <a href="http://www.isi.edu/integration/papers/tuchinda07-iui.pdf" onclick="var cframe = document.getElementById('bibbase_controlframe'); cframe.contentWindow.location.href = 'http://www.bibbase.org/cgi-bin/writelog.cgi?servername=www.bibbase.org&amp;followlink=www.isi.edu/integration/papers/tuchinda07-iui.pdf';"><img src="http://www.bibbase.org/resources/filetypes/pdf.png" alt="Paper [PDF]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon'/><span style="" class='bibbase_icon_text'>Paper</span></a> <a href="http://www.bibbase.org/cache/www.isi.edu_integration_karma_karma-bib.bib/tuchinda07:iui.bib"><img src="http://www.bibbase.org/resources/filetypes/bib.png" alt="Paper [bib]" style="width: 24px; height: 24px; border: 0px; vertical-align: text-top" class='bibbase_icon' /><span style="" class='bibbase_icon_text'>Bibtex</span></a> &nbsp; <span class='bibbase_stats_paper' style='color: #777;'><span id='span_stats_paper_http___www_isi_edu_integration_papers_tuchinda07_iui_pdf'></span></span> &nbsp;</span> <br/>
-</div>
-</div>
-</div>
-
-	  
-	  
-	  
 	  </div>
-	  
-	  
-	  
-	  </div>
-      
-      
+</div>   
       
       <hr>
 
@@ -591,15 +1511,19 @@ new TWTR.Widget({
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
      <script src="assets/js/bootstrap-tooltip.js"></script>
      <script src="assets/js/bootstrap-popover.js"></script>
-     
-	<script src="http://bibbase.org/js/bibbase.js"></script>
-    <script src="assets/js/bootstrap-transition.js"></script>
-    <script src="assets/js/bootstrap-modal.js"></script>    
-    
+       <script src="http://www.bibbase.org/js/bibbase.js" type="text/javascript"></script>
+           <script src="assets/js/bootstrap-dropdown.js"></script>
+     <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>     
     <script src="assets/js/bootstrap-button.js"></script>   
     <script src="assets/js/bootstrap-typeahead.js"></script>
- 
      <script src="assets/js/bootstrap-collapse.js"></script>
+
+  <script src="http://www.bibbase.org/js/google_analytics.js" type="text/javascript"></script>
+  <script charset="utf-8" 
+	  type="text/javascript" 
+	  src="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822/US/bib0d-20/8005/988928d1-4ba9-465b-91e6-b5496ef7f913">
+  </script>
    
 	<!--Javascript not used
 	    <script src="assets/js/bootstrap-dropdown.js"></script>
@@ -610,21 +1534,21 @@ new TWTR.Widget({
    
     
     <script src="assets/js/bootstrap-alert.js"></script>
-	-->  
+ --> 
 	<script>	
 	$(document).ready( function () {
-	toggleFold("id_2011");
-	toggleFold("id_2010");
-	toggleFold("id_2009");
-	toggleFold("id_2008");
-	toggleFold("id_2007");
+	toggle("id_2011");
+	toggle("id_2010");
+	toggle("id_2009");
+	toggle("id_2008");
+	toggle("id_2007");
 })	
-	</script>
+	</script>	
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-42422679-1', 'isi.edu');
   ga('send', 'pageview');
