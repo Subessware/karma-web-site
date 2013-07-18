@@ -94,3 +94,7 @@ iframe {
 .thumbnails .h5{ overflow :hidden; text-overflow:ellipsis; text-align: center; }
 .thumbnails img{ height:115px;}
 
+/*Bibbase*/
+span.bibbase_icon_text{
+display: inline-block;
+}
