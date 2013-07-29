@@ -105,7 +105,10 @@
 					<div class="row">
 							<div class="span12">
          <p class="abc muted">Karma is an information integration tool that enables users to quickly and easily integrate data from a variety of data sources including databases, spreadsheets, delimited text files, XML, JSON, KML and Web APIs. Users integrate information by modeling it according to an ontology of their choice using a graphical user interface that automates much of the process. Karma learns to recognize the mapping of data to ontology classes and then uses the ontology to propose a model that ties together these classes. Users then interact with the system to adjust the automatically generated model. During this process, users can transform the data as needed to normalize data expressed in different formats and to restructure it. Once the model is complete, users can published the integrated data as RDF or store it in a database.</p>
-<p>A cool video that illustrates why Karma is significant: <a href="http://www.youtube.com/watch?v=N2zK3sAtr-4&amp;feature=youtu.be">Data Sharing and Management Snafu in 3 Short Acts</a></p>
+
+        <!-- <p>A cool video that illustrates why Karma is significant: <a href="http://www.youtube.com/watch?v=N2zK3sAtr-4&amp;feature=youtu.be">Data Sharing and Management Snafu in 3 Short Acts</a></p> -->
+            <p>All the project publications are <a href="#publication">here</a>. The best paper on the technical aspects of Karma is our <a href="http://www.isi.edu/integration/papers/knoblock12-eswc.pdf">ESWC'2012 paper</a> (<a href="javascript:showBib('knoblock12:eswc')">bibtex</a>), and the best application paper is our <a href="http://www.isi.edu/~szekely/contents/papers/2013/eswc-2013-saam.pdf">ESWC'2013 paper</a> (<a href="javascript:showBib('Szekely:2013vq')">bibtex</a>), which received the best in-use paper award at the conference.</p>
+                                
         					</div>  
 					</div>
         
