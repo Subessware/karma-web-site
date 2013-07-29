@@ -98,3 +98,7 @@ iframe {
 span.bibbase_icon_text{
 display: inline-block;
 }
+bibbase_icon{
+    display: none;
+}
+

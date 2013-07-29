@@ -17,7 +17,7 @@
     </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -422,7 +422,15 @@ new TWTR.Widget({
                </div>
           </div>
           </li>
-           <!--
+        <li class="span2">
+          <div class="thumbnail"><a href="http://www.linkedin.com/pub/akshay-dani/9/549/683">
+            <img src="assets/img/students/akshay.jpg" alt="Akshay Ramesh Dani"></a>
+            <div class="caption">
+              <h5>Akshay Ramesh Dani</h5>
+               </div>
+          </div>
+          </li>
+           <!-- 
         </li>
           <li class="span2">
           <div class="thumbnail">
@@ -431,47 +439,6 @@ new TWTR.Widget({
               <h5>Product detail</h5>
                </div>
           </div>
-        </li>
-          <li class="span2">
-          <div class="thumbnail">
-            <img src="shoes2.jpg" alt="product 2">
-            <div class="caption">
-              <h5>Product detail</h5>
-               </div>
-          </div>
-        </li>
-          <li class="span2">
-          <div class="thumbnail">
-            <img src="shoes2.jpg" alt="product 2">
-            <div class="caption">
-              <h5>Product detail</h5>
-               </div>
-          </div>
-        </li>
-          <li class="span2">
-          <div class="thumbnail">
-            <img src="shoes2.jpg" alt="product 2">
-            <div class="caption">
-              <h5>Product detail</h5>
-               </div>
-          </div>
-        </li>
-          <li class="span2">
-          <div class="thumbnail">
-            <img src="shoes2.jpg" alt="product 2">
-            <div class="caption">
-              <h5>Product detail</h5>
-               </div>
-          </div>
-        </li>
-          <li class="span2">
-          <div class="thumbnail">
-            <img src="shoes2.jpg" alt="product 2">
-            <div class="caption">
-              <h5>Product detail</h5>
-               </div>
-          </div>
-        </li>
         -->
       </ul>
 
@@ -484,7 +451,10 @@ new TWTR.Widget({
 	  <h2>Publications</h2> 
 	  
 
-
+<?php
+    $contents = file_get_contents("http://www.bibbase.org/show?bib=http://www.isi.edu/integration/karma/karma-bib.bib&groupby=year&proxy=1&simplegroups=1");
+    print_r($contents);
+  ?> 
 
     <div id="footer">
       <div class="container">
