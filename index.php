@@ -207,9 +207,10 @@ new TWTR.Widget({
           
         </div>
         <div class="span4">
-        <div class="image">
-         <a href="assets/img/saam-graphic-v4-no-border-PNG.png"><img src="assets/img/saam-graphic-v4-no-border-PNG.png" alt="project"></a>
-       </div>
+        <div class="video">
+         <!-- Keep ref to old image so we can use it elsewhere: <a href="assets/img/saam-graphic-v4-no-border-PNG.png"><img src="assets/img/saam-graphic-v4-no-border-PNG.png" alt="project"></a> -->
+            <iframe src="//www.youtube.com/embed/1Vaytr09H1w" allowfullscreen></iframe>
+        </div>
         </div>
       </div>
 
