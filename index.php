@@ -459,7 +459,8 @@ new TWTR.Widget({
 <?php
     $contents = file_get_contents("http://www.bibbase.org/show?bib=http://www.isi.edu/integration/karma/karma-bib.bib&groupby=year&proxy=1");
     print_r($contents);
-  ?> 
+  ?>
+<br/> 
 
           
           
