@@ -27,6 +27,10 @@ margin: 0 auto;
 	height: 100%;
 }
 
+.notice{
+  background: #FFD300;
+}
+
 .abc{
 	padding-top: 20px;
 	text-align:justify;

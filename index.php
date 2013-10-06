@@ -63,7 +63,8 @@
         <h3>A Data Integration Tool</h3>
         <div id="download">
       <p class="">Karma is available as open source (Apache 2 License)
-      <a href="https://github.com/InformationIntegrationGroup/Web-Karma-Public" class="btn btn-primary">Download &raquo;</a></p>
+      <a href="https://github.com/InformationIntegrationGroup/Web-Karma" class="btn btn-primary">Download &raquo;</a></p>
+      <p class="notice">Notice (Oct 5, 2013): we replaced Web-Karma-Public with Web-Karma. Please download the new repository.</p>
       </div>
       </div>
 	 
@@ -470,7 +471,7 @@ new TWTR.Widget({
           
     <div id="footer">
       <div class="container">
-        <p class="muted credit">This research is based upon work supported in part by the National Science Foundation under award number IIS-1117913, the NIH through the following NCRR grant: the Biomedical Informatics Research Network (1 U24 RR025736-01), the National Institutes of Health under grant number (1 UL1 RR031986-01), and Chevron Corp. under the joint project Center for Interactive Smart Oilfield Technologies (CiSoft), at the University of Southern California.</p>
+        <p class="muted credit">This research is based upon work supported in part by the Smithsonian American Art Museum, the National Science Foundation under awards IIS-1117913 and CMMI-0753124, the NIH through the following NCRR grant: the Biomedical Informatics Research Network (1 U24 RR025736-01), the National Institutes of Health under grant number (1 UL1 RR031986-01), and Chevron Corp. under the joint project Center for Interactive Smart Oilfield Technologies (CiSoft), at the University of Southern California.</p>
       </div>
     </div>
     </div> <!-- /container -->
